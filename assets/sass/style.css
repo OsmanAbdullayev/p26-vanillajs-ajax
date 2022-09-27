@@ -74,7 +74,7 @@ body aside.verticalMenu {
   z-index: 4;
   left: 0;
   height: 100vh;
-  width: 20vw;
+  width: 300px;
   overflow: auto;
   background-color: black;
 }
@@ -174,7 +174,6 @@ main {
 main section.background {
   position: relative;
   width: 100%;
-  height: 100vh;
   overflow: hidden;
 }
 main section.background nav#colors {
@@ -278,6 +277,7 @@ main section.background .hero article h1 #jura {
   color: rgb(110, 69, 226);
 }
 main section.background .hero article p {
+  padding: 40px 0;
   font-size: 1.2em;
   width: 70%;
 }
@@ -402,4 +402,192 @@ button.green {
 
 .showNav {
   display: block !important;
+}
+
+.black {
+  background-color: black;
+}
+.black header .buttons button i {
+  color: white;
+}
+.black header li a,
+.black header li i {
+  color: white;
+}
+.black header figure img {
+  content: url(../img/logo-white.png);
+}
+.black main .hero article h1 #creative {
+  color: white !important;
+}
+.black main .hero article h1 #agency {
+  color: white !important;
+}
+.black main .hero article h1 #jura {
+  color: teal !important;
+}
+.black main .hero article p {
+  color: white !important;
+}
+.black .rightRectangle {
+  background-color: rgb(44, 44, 44) !important;
+}
+.black .blurredCircle {
+  background-color: #38f9d7;
+}
+.black .movingCircle {
+  background-color: #6e45e2;
+}
+
+.indigo #jura {
+  color: indigo !important;
+}
+.indigo .buttonPrimary {
+  background-color: indigo;
+}
+.indigo .rightRectangle {
+  background-color: indigo !important;
+  opacity: 0.3;
+}
+.indigo .blurredCircle {
+  background-color: indigo;
+}
+.indigo .movingCircle {
+  background-color: indigo !important;
+  opacity: 0.3;
+}
+
+.coral #jura {
+  color: coral !important;
+}
+.coral .buttonPrimary {
+  background-color: coral;
+}
+.coral .rightRectangle {
+  background-color: coral !important;
+  opacity: 0.3;
+}
+.coral .blurredCircle {
+  background-color: coral;
+}
+.coral .movingCircle {
+  background-color: coral !important;
+  opacity: 0.3;
+}
+
+.teal #jura {
+  color: teal !important;
+}
+.teal .buttonPrimary {
+  background-color: teal;
+}
+.teal .rightRectangle {
+  background-color: teal !important;
+  opacity: 0.3;
+}
+.teal .blurredCircle {
+  background-color: teal;
+}
+.teal .movingCircle {
+  background-color: teal !important;
+  opacity: 0.3;
+}
+
+.green #jura {
+  color: green !important;
+}
+.green .buttonPrimary {
+  background-color: green;
+}
+.green .rightRectangle {
+  background-color: green !important;
+  opacity: 0.3;
+}
+.green .blurredCircle {
+  background-color: green;
+}
+.green .movingCircle {
+  background-color: green !important;
+  opacity: 0.3;
+}
+
+.grey #jura {
+  color: grey !important;
+}
+.grey .buttonPrimary {
+  background-color: grey;
+}
+.grey .rightRectangle {
+  background-color: transparent !important;
+  opacity: 0.3;
+}
+.grey .blurredCircle {
+  background-color: grey;
+}
+.grey .movingCircle {
+  background-color: grey !important;
+  opacity: 0.3;
+}
+
+.orange #jura {
+  color: orange !important;
+}
+.orange .buttonPrimary {
+  background-color: orange;
+}
+.orange .rightRectangle {
+  background-color: orange !important;
+  opacity: 0.3;
+}
+.orange .blurredCircle {
+  background-color: orange;
+}
+.orange .movingCircle {
+  background-color: orange !important;
+  opacity: 0.3;
+}
+
+@media only screen and (max-width: 1138px) {
+  header .horizontalMenu {
+    display: none;
+  }
+}
+@media only screen and (max-width: 760px) {
+  header {
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 10px !important;
+    justify-content: space-between;
+  }
+  header #purchaseNow {
+    display: none;
+  }
+  header #hamburger {
+    z-index: 5 !important;
+  }
+  .hero {
+    flex-direction: column;
+    margin: 0;
+  }
+  .hero article {
+    margin: 1em !important;
+    margin-top: 100px !important;
+    align-items: end !important;
+  }
+  .hero article h1 {
+    margin: 20px 0;
+    font-size: 3em !important;
+    text-align: end;
+  }
+  .hero article p {
+    font-size: 1em !important;
+  }
+  .hero article button {
+    margin: 20px 0;
+  }
+  .hero div.images {
+    width: 100% !important;
+    margin-top: 70px !important;
+    margin-right: 0 !important;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -18,3 +18,37 @@ $("li.top").hover(function () {
 $("li.topAside").click(function () {
 	$(".sub", this).slideToggle("fast");
 });
+
+$("button.black").click(function () {
+	$("body").removeClass().addClass("black");
+});
+
+$("button.blue").click(function () {
+	$("body").removeClass();
+});
+
+$("button.indigo").click(function () {
+	$("body").removeClass().addClass("indigo");
+});
+
+// 
+
+$("button.coral").click(function () {
+	$("body").removeClass().addClass("coral");
+});
+
+$("button.teal").click(function () {
+	$("body").removeClass().addClass("teal");
+});
+
+$("button.green").click(function () {
+	$("body").removeClass().addClass("green");
+});
+
+$("button.grey").click(function () {
+	$("body").removeClass().addClass("grey");
+});
+
+$("button.orange").click(function () {
+	$("body").removeClass().addClass("orange");
+});

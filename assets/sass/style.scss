@@ -13,7 +13,7 @@ body {
 		z-index: 4;
 		left: 0;
 		height: 100vh;
-		width: 20vw;
+		width: 300px;
 		overflow: auto;
 		background-color: black;
 		ul {
@@ -85,15 +85,15 @@ body {
 					.sub {
 						display: none;
 						position: absolute;
-                        width: 300px;
+						width: 300px;
 						// display: flex;
 						flex-direction: column;
 						justify-content: start;
 						align-items: start;
-                        background-color: white;
-                        padding: 1em;
+						background-color: white;
+						padding: 1em;
 						li {
-                            padding: 0.5em;
+							padding: 0.5em;
 						}
 					}
 				}
@@ -122,7 +122,7 @@ main {
 	section.background {
 		position: relative;
 		width: 100%;
-		height: 100vh;
+		// height: 100vh;
 		overflow: hidden;
 		nav#colors {
 			transition: 0.5s;
@@ -223,6 +223,7 @@ main {
 					}
 				}
 				p {
+					padding: 40px 0;
 					font-size: 1.2em;
 					width: 70%;
 				}
@@ -317,11 +318,249 @@ button.green {
 	background-color: green;
 }
 
-
 .shown {
 	left: 0 !important;
 }
 
 .showNav {
 	display: block !important;
+}
+
+.black {
+	background-color: black;
+
+	header {
+		.buttons {
+			button {
+				i {
+					color: white;
+				}
+			}
+		}
+		li {
+			a,
+			i {
+				color: white;
+			}
+		}
+		figure {
+			img {
+				content: url(../img/logo-white.png);
+			}
+		}
+	}
+	main {
+		.hero {
+			article {
+				h1 {
+					#creative {
+						color: white !important;
+					}
+					#agency {
+						color: white !important;
+					}
+					#jura {
+						color: teal !important;
+					}
+				}
+				p {
+					color: white !important;
+				}
+			}
+		}
+	}
+	.rightRectangle {
+		background-color: rgb(44, 44, 44) !important;
+	}
+
+	.blurredCircle {
+		background-color: #38f9d7;
+	}
+
+	.movingCircle {
+		background-color: #6e45e2;
+	}
+}
+
+.indigo {
+	#jura {
+		color: indigo !important;
+	}
+	.buttonPrimary {
+		background-color: indigo;
+	}
+	.rightRectangle {
+		background-color: indigo !important;
+		opacity: 0.3;
+	}
+
+	.blurredCircle {
+		background-color: indigo;
+	}
+
+	.movingCircle {
+		background-color: indigo !important;
+		opacity: 0.3;
+	}
+}
+
+.coral {
+	#jura {
+		color: coral !important;
+	}
+	.buttonPrimary {
+		background-color: coral;
+	}
+	.rightRectangle {
+		background-color: coral !important;
+		opacity: 0.3;
+	}
+
+	.blurredCircle {
+		background-color: coral;
+	}
+
+	.movingCircle {
+		background-color: coral !important;
+		opacity: 0.3;
+	}
+}
+
+.teal {
+	#jura {
+		color: teal !important;
+	}
+	.buttonPrimary {
+		background-color: teal;
+	}
+	.rightRectangle {
+		background-color: teal !important;
+		opacity: 0.3;
+	}
+
+	.blurredCircle {
+		background-color: teal;
+	}
+
+	.movingCircle {
+		background-color: teal !important;
+		opacity: 0.3;
+	}
+}
+
+.green {
+	#jura {
+		color: green !important;
+	}
+	.buttonPrimary {
+		background-color: green;
+	}
+	.rightRectangle {
+		background-color: green !important;
+		opacity: 0.3;
+	}
+
+	.blurredCircle {
+		background-color: green;
+	}
+
+	.movingCircle {
+		background-color: green !important;
+		opacity: 0.3;
+	}
+}
+
+.grey {
+	#jura {
+		color: grey !important;
+	}
+	.buttonPrimary {
+		background-color: grey;
+	}
+	.rightRectangle {
+		background-color: transparent !important;
+		opacity: 0.3;
+	}
+
+	.blurredCircle {
+		background-color: grey;
+	}
+
+	.movingCircle {
+		background-color: grey !important;
+		opacity: 0.3;
+	}
+}
+
+.orange {
+	#jura {
+		color: orange !important;
+	}
+	.buttonPrimary {
+		background-color: orange;
+	}
+	.rightRectangle {
+		background-color: orange !important;
+		opacity: 0.3;
+	}
+
+	.blurredCircle {
+		background-color: orange;
+	}
+
+	.movingCircle {
+		background-color: orange !important;
+		opacity: 0.3;
+	}
+}
+
+@media only screen and (max-width: 1138px) {
+	header {
+		.horizontalMenu {
+			display: none;
+		}
+	}
+}
+
+@media only screen and (max-width: 760px) {
+	header {
+		width: 100%;
+		padding: 0 !important;
+		margin: 0 10px !important;
+		justify-content: space-between;
+		#purchaseNow {
+			display: none;
+		}
+		#hamburger {
+			z-index: 5 !important;
+	
+		}
+	}
+	.hero {
+		flex-direction: column;
+		margin: 0;
+		// margin-top: 100px;
+		// padding: 0;
+		article {
+			margin: 1em !important;
+			margin-top: 100px !important;
+			align-items: end !important;
+			h1 {
+				margin: 20px 0;
+				font-size: 3em !important;
+				text-align: end;
+			}
+			p {
+				font-size: 1em !important;
+			}
+			button {
+				margin: 20px 0;
+			}
+		}
+		div.images {
+			width: 100% !important;
+			margin-top: 70px !important;
+			margin-right: 0 !important;
+		}
+	}
 }
