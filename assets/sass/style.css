@@ -407,6 +407,12 @@ button.green {
 .black {
   background-color: black;
 }
+.black ul.sub {
+  background-color: black !important;
+}
+.black ul.sub li a {
+  color: white;
+}
 .black header .buttons button i {
   color: white;
 }
