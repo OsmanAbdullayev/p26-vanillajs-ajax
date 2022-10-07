@@ -1,54 +1,48 @@
-$(document).ready(function () {
-	$(".toggle").click(function () {
-		$("nav#colors").toggleClass("shown");
-	});
+// $(document).ready(function () {
+//     $(document).bind('keypress', function(e) {
+//         if(e.keyCode==13){
+//              $('#button').trigger('click');
+//          }
+//     });
 
-	$("#hamburger").click(function () {
-		$("aside.verticalMenu").toggleClass("showNav");
-		$(this).html() == '<i class="fa-solid fa-xmark"></i>'
-			? $(this).html('<i class="fa-solid fa-bars"></i>')
-			: $(this).html('<i class="fa-solid fa-xmark"></i>');
-	});
-});
+// 	$("#button").click(function () {
+// 		let inputValue = $("#search").val();
+// 		$("#textOutput").load(`./assets/data/${inputValue.toLowerCase()}.txt`, function (response, status, xhr) {
+// 			if (status == "error") {
+// 				var msg = "There was no match in our database. Please, make sure you typed the name of the country correctly.";
+// 				alert(msg);
+// 			} else {
+// 				$("h1").html(`This is what we found about ${inputValue.toUpperCase()}:`);
+//                 $("#search").val("");
+// 			}
+// 		});
+// 	});
+// });
 
-$("li.top").hover(function () {
-	$(".sub", this).slideToggle("fast");
-});
+document.querySelector("#button").onclick = function () {
+	const input = document.querySelector("#search").value;
+	const ajaxmethod = new XMLHttpRequest();
+	ajaxmethod.onload = function () {
+		if (this.status === 404) {
+			var msg = "There was no match in our database. Please, make sure you typed the name of the country correctly.";
+			alert(msg);
+		} else {
+			document.querySelector("#h1").innerHTML = `This is what we found about ${input.toUpperCase()}`;
+			document.querySelector("#textOutput").innerHTML = this.responseText;
+			document.querySelector("#search").value = "";
+		}
+	};
+	ajaxmethod.open("GET", `./assets/data/${input}.txt`);
+	ajaxmethod.send();
+};
 
-$("li.topAside").click(function () {
-	$(".sub", this).slideToggle("fast");
-});
-
-$("button.black").click(function () {
-	$("body").removeClass().addClass("black");
-});
-
-$("button.blue").click(function () {
-	$("body").removeClass();
-});
-
-$("button.indigo").click(function () {
-	$("body").removeClass().addClass("indigo");
-});
-
-// 
-
-$("button.coral").click(function () {
-	$("body").removeClass().addClass("coral");
-});
-
-$("button.teal").click(function () {
-	$("body").removeClass().addClass("teal");
-});
-
-$("button.green").click(function () {
-	$("body").removeClass().addClass("green");
-});
-
-$("button.grey").click(function () {
-	$("body").removeClass().addClass("grey");
-});
-
-$("button.orange").click(function () {
-	$("body").removeClass().addClass("orange");
+// Execute a function when the user presses a key on the keyboard
+document.querySelector("#search").addEventListener("keypress", function (event) {
+	// If the user presses the "Enter" key on the keyboard
+	if (event.key === "Enter") {
+		// Cancel the default action, if needed
+		event.preventDefault();
+		// Trigger the button element with a click
+		document.querySelector("#button").click();
+	}
 });
